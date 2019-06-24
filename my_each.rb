@@ -1,10 +1,11 @@
-
-def my_each(collection)
- i = 0
-  while i < array.length
-  yield collection[i]
-   i += 1
+def my_each(array) # put argument(s) here
+  # code here
+  i = 0
+  while i < array.size
+    block_given? # optional
+    yield(array[i]) # if block, then yield to block # also need to pass argument(s) to yield, otherwise block is operating on nil
+    i += 1
   end
-collection
+array
 end
 
